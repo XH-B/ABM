@@ -1,5 +1,5 @@
 
-# Handwritten Mathematical Expression Recognition via AttentionAggregation based Bi-directional Mutual Learning (AAAI2022)
+# Handwritten Mathematical Expression Recognition via Attention Aggregation based Bi-directional Mutual Learning (AAAI2022)
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
 ![PyTorch 1.2](https://img.shields.io/badge/PyTorch%20-%23EE4C2C.svg?style=plastic)
 ![cuDNN 7.3.1](https://img.shields.io/badge/cudnn-7.3.1-green.svg?style=plastic)
