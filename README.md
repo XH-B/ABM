@@ -54,7 +54,7 @@ Note that we train our model on one train set CROHME 2014 and test the model on 
 sh train.sh -L2R
 
 # for training on CROHME 2014  with two branches (L2R and R2L) (our model, ABM)
-sh train.sh -L2RR2L
+sh train.sh -L2R-R2L
 
 
 # for testing on CROHME 2014, 2016, 2019 with L2R branch
