@@ -92,5 +92,4 @@ if __name__ == "__main__":
     
 
     args = parser.parse_args()
-    out_path = args.model_path.split('/')[-2]
     main(args.k, args.model_path, args.dictionary_target, args.test_dataset, args.label, args.saveto, args.output, args.idx_decoder)
