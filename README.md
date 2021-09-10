@@ -1,4 +1,4 @@
-# ABM
+
 # Handwritten Mathematical Expression Recognition via AttentionAggregation based Bi-directional Mutual Learning (AAAI2022)
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
 ![PyTorch 1.2](https://img.shields.io/badge/PyTorch%20-%23EE4C2C.svg?style=plastic)
