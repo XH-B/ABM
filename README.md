@@ -5,7 +5,20 @@
 ![cuDNN 7.3.1](https://img.shields.io/badge/cudnn-7.3.1-green.svg?style=plastic)
 ![License CC BY-NC-SA](https://img.shields.io/badge/license-CC_BY--NC--SA--green.svg?style=plastic)
 
+This is the origin Pytorch implementation of ABM. 
 
+## Methods
+
+We propose a novel framework with **A**ttention aggregation and **B**i-directional **M**utual learning **(ABM)** for HMER. Specially, our framework includes three modules: Feature Extraction, Attention Aggregation and Bi-directional Mutual Learning.
+(1) In Feature Extraction module, we use DenseNet as feature extractor as it has proved to be effective in WAP. 
+(2) In Attention Aggregation module, we propose multi-scale coverage attention to recognize characters of different sizes in mathematical expressions, thereby improving the recognition accuracy at the current moment and alleviating the problem of error accumulation.
+(3) In Bi-directional Mutual Learning module, we propose a novel decoder framework with two parallel decoder branches in opposite decoding directions (L2R and R2L) and use mutual distillation to learn from each other. Specifically, this framework helps the current coverage attention to capitalize upon historical and future information sufficiently at the same time, so as to better determine the current attention position. Therefore, each branch can learn more complementary context information and explore long-distance dependency information through step-by-step mutual learning, leading to stronger decoding ability. Note that while we use two decoders for training, we only use one L2R branch for inference.
+
+<p align="center">
+<img src="./image/network.png" height = "350" alt="" align=center />
+<br><br>
+<b>Figure 1.</b> The architecture of ABM.
+</p>
 
 
 ## Requirements
@@ -28,11 +41,6 @@ We use public
 The Offline Handwritten Formula Recognition dataset CROHME 2014, 2016 and 2019 used in the paper can be download in the [TC-11 Online Resources](http://tc11.cvc.uab.es/datasets/ICDAR2019-CROHME-TDF_1) or in offical [ICDAR 2019 CROHME + TFD Competition ](https://www.cs.rit.edu/~crohme2019/dataANDtools.html).
 The required data files should be put into `data/` folder. A demo slice of the data is illustrated in the following figure. 
 
-<p align="center">
-<img src="./img/data.png" height = "168" alt="" align=center />
-<br><br>
-<b>Figure 3.</b> An example of the ETT data.
-</p>
 
 
 ## Usage
@@ -127,13 +135,30 @@ We have updated the experiment results of all methods due to the change in data 
 Besides, the experiment parameters of each data set are formated in the `.sh` files in the directory `./scripts/`. You can refer to these parameters for experiments, and you can also adjust the parameters to obtain better mse and mae results or draw better prediction figures.
 
 <p align="center">
-<img src="./img/result_univariate.png" height = "500" alt="" align=center />
+<img src="./image/result.png" height = "500" alt="" align=center />
 <br><br>
-<b>Figure 4.</b> Univariate forecasting results.
+<b>Figure 2.</b> Comparison with prior works (in %). Note that our results are from L2R branch. The results shown in the upper are partly cited from their corresponding papers.
 </p>
 
+
 <p align="center">
-<img src="./img/result_multivariate.png" height = "500" alt="" align=center />
+<img src="./image/ablation_study.png" height = "200" alt="" align=center />
 <br><br>
-<b>Figure 5.</b> Multivariate forecasting results.
+<b>Figure 3.</b> Ablation study (in %). We evaluate AAM and BML modules on CROHME 2014 test dataset.
 </p>
+
+
+<p align="center">
+<img src="./image/coverage.png" height = "150" alt="" align=center />
+<br><br>
+<b>Figure 4.</b> Coverage attention visualization process of translating handwritten mathematical expressions into LaTeX sequencesin two directions (L2R and R2L). The blue box indicates the character being decoded in current time step.
+</p>
+
+
+<p align="center">
+<img src="./image/feature.png" height = "150" alt="" align=center />
+<br><br>
+<b>Figure 5.</b> t-SNE Visualisation of DWAP (baseline) and ABM
+on CROHME 2014.
+</p>
+
