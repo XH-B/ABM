@@ -66,7 +66,6 @@ The detailed descriptions about the arguments are as following:
 
 | Parameter name | Description of parameter |
 | --- | --- |
-| model | The model of experiment. This can be set to `informer`, `informerstack`, `informerlight(TBD)` |
 | dictionaries           |        dictionaries for 113 class symbols      (defaults to `./data/dictionary_bid.txt`)                                |
 | train_datasets      | The root path of the data file (defaults to `./data/offline-train.pkl`)  and label file  (defaults to `./data/train_caption.txt`)  |
 | valid_datasets      | The root path of the data file (defaults to `./data/offline-test.pkl`)  and label file  (defaults to `./data/test_caption..txt`)  |
