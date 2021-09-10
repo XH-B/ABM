@@ -70,24 +70,6 @@ sh test.sh -2014  R2L
 
 
 
-We provide a more detailed and complete command description for training and testing the model:
-
-```python
-python -u main_informer.py --model <model> --data <data>
---root_path <root_path> --data_path <data_path> --features <features>
---target <target> --freq <freq> --checkpoints <checkpoints>
---seq_len <seq_len> --label_len <label_len> --pred_len <pred_len>
---enc_in <enc_in> --dec_in <dec_in> --c_out <c_out> --d_model <d_model>
---n_heads <n_heads> --e_layers <e_layers> --d_layers <d_layers>
---s_layers <s_layers> --d_ff <d_ff> --factor <factor> --padding <padding>
---distil --dropout <dropout> --attn <attn> --embed <embed> --activation <activation>
---output_attention --do_predict --mix --cols <cols> --itr <itr>
---num_workers <num_workers> --train_epochs <train_epochs>
---batch_size <batch_size> --patience <patience> --des <des>
---learning_rate <learning_rate> --loss <loss> --lradj <lradj>
---use_amp --inverse --use_gpu <use_gpu> --gpu <gpu> --use_multi_gpu --devices <devices>
-```
-
 The detailed descriptions about the arguments are as following:
 
 | Parameter name | Description of parameter |
@@ -130,9 +112,9 @@ The detailed descriptions about the arguments are as following:
 
 ## <span id="resultslink">Results</span>
 
-We have updated the experiment results of all methods due to the change in data scaling. We are lucky that Informer gets performance improvement. Thank you @lk1983823 for reminding the data scaling in [issue 41](https://github.com/zhouhaoyi/Informer2020/issues/41).
 
-Besides, the experiment parameters of each data set are formated in the `.sh` files in the directory `./scripts/`. You can refer to these parameters for experiments, and you can also adjust the parameters to obtain better mse and mae results or draw better prediction figures.
+
+Besides, the experiment parameters of each data set are formated in the `.sh` files. You can refer to these parameters for experiments, and you can also adjust the parameters to obtain better results or draw better prediction figures.
 
 <p align="center">
 <img src="./image/result.png" height = "500" alt="" align=center />
@@ -142,7 +124,7 @@ Besides, the experiment parameters of each data set are formated in the `.sh` fi
 
 
 <p align="center">
-<img src="./image/ablation_study.png" height = "200" alt="" align=center />
+<img src="./image/ablation_study.png" height = "150" alt="" align=center />
 <br><br>
 <b>Figure 3.</b> Ablation study (in %). We evaluate AAM and BML modules on CROHME 2014 test dataset.
 </p>
