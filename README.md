@@ -23,17 +23,10 @@ We propose a novel framework with **A**ttention aggregation and **B**i-direction
 
 ## Requirements
 
-- Python 3.6
-- matplotlib == 3.1.1
+- Python 3.7.4
 - numpy == 1.19.4
-- pandas == 0.25.1
-- scikit_learn == 0.21.3
-- torch == 1.8.0
+- torch == 1.6.0
 
-Dependencies can be installed using the following command:
-```bash
-pip install -r requirements.txt
-```
 
 
 ## Data
