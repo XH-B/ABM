@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=0
 
-path='./ABM_params162_lr0.03125_56.75126903553299.pkl' 
+path='./ABM.pkl' 
 
 dataset=$1
 branch=$2
