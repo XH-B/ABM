@@ -14,16 +14,20 @@ We propose a novel framework with **A**ttention aggregation and **B**i-direction
 (2) In Attention Aggregation module, we propose multi-scale coverage attention to recognize characters of different sizes in mathematical expressions, thereby improving the recognition accuracy at the current moment and alleviating the problem of error accumulation.
 (3) In Bi-directional Mutual Learning module, we propose a novel decoder framework with two parallel decoder branches in opposite decoding directions (L2R and R2L) and use mutual distillation to learn from each other. Specifically, this framework helps the current coverage attention to capitalize upon historical and future information sufficiently at the same time, so as to better determine the current attention position. Therefore, each branch can learn more complementary context information and explore long-distance dependency information through step-by-step mutual learning, leading to stronger decoding ability. Note that while we use two decoders for training, we only use one L2R branch for inference.
 
-<p align="center">
-<img src="./image/cos frac { ( a _ { 0 } + a _ { 1 } ) pi } { 2 } eos.gif" height = "350" alt="" align=center />
-<br><br>
-<b>Figure 1.</b> The architecture of ABM.
-</p>
 
-<p align="center">
-<img src="./image/network.png" height = "350" alt="" align=center />
-<br><br>
-<b>Figure 1.</b> The architecture of ABM.
+
+
+
+<center class="center">
+     <img src="./image/cos frac { ( a _ { 0 } + a _ { 1 } ) pi } { 2 } eos_coverage.gif" width="350"/><img src="./image/cos frac { ( a _ { 0 } + a _ { 1 } ) pi } { 2 } eos.gif" width="350"/>
+</center>
+
+
+<center class="center">
+     <img src="./image/} 2 { } pi ) } 1 { _ a + } 0 { _ a ( { frac cos_coverage.gif" width="350"/><img src="./image/} 2 { } pi ) } 1 { _ a + } 0 { _ a ( { frac cos.gif" width="350"/>
+</center>
+
+
 </p>
 <p align="center">
 <img src="./image/network.png" height = "350" alt="" align=center />
