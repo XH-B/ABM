@@ -45,7 +45,7 @@ We propose a novel framework with **A**ttention aggregation and **B**i-direction
 
 ## Requirements
 
-- Python 3.7.4
+- Python 3.6
 - numpy == 1.19.4
 - torch == 1.6.0
 
