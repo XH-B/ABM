@@ -15,24 +15,31 @@ We propose a novel framework with **A**ttention aggregation and **B**i-direction
 (3) In Bi-directional Mutual Learning module, we propose a novel decoder framework with two parallel decoder branches in opposite decoding directions (L2R and R2L) and use mutual distillation to learn from each other. Specifically, this framework helps the current coverage attention to capitalize upon historical and future information sufficiently at the same time, so as to better determine the current attention position. Therefore, each branch can learn more complementary context information and explore long-distance dependency information through step-by-step mutual learning, leading to stronger decoding ability. Note that while we use two decoders for training, we only use one L2R branch for inference.
 
 
+</p>
+<p align="center">
+<img src="./image/3 . 0 0 0 0 0 0 0 3.gif" height = "120" alt="" align=center />
+<br><br>
+<b>Figure 1.</b> The attention of L2R branch of ABM (left:coverge attention, right: current attention).
+</p>
+
+</p>
+<p align="center">
+<img src="./image/3 0 0 0 0 0 0 0 . 3.gif" height = "120" alt="" align=center />
+<br><br>
+<b>Figure 2.</b> The attention of R2L branch of ABM (left:coverge attention, right: current attention).
+</p>
 
 
 
-<center class="center">
-     <img src="./image/cos frac { ( a _ { 0 } + a _ { 1 } ) pi } { 2 } eos_coverage.gif" width="350"/><img src="./image/cos frac { ( a _ { 0 } + a _ { 1 } ) pi } { 2 } eos.gif" width="350"/>
-</center>
 
 
-<center class="center">
-     <img src="./image/} 2 { } pi ) } 1 { _ a + } 0 { _ a ( { frac cos_coverage.gif" width="350"/><img src="./image/} 2 { } pi ) } 1 { _ a + } 0 { _ a ( { frac cos.gif" width="350"/>
-</center>
 
 
 </p>
 <p align="center">
 <img src="./image/network.png" height = "350" alt="" align=center />
 <br><br>
-<b>Figure 1.</b> The architecture of ABM.
+<b>Figure 3.</b> The architecture of ABM.
 </p>
 
 
@@ -124,28 +131,28 @@ Besides, the experiment parameters of each data set are formated in the `.sh` fi
 <p align="center">
 <img src="./image/result.png" height = "500" alt="" align=center />
 <br><br>
-<b>Figure 2.</b> Comparison with prior works (in %). Note that our results are from L2R branch. The results shown in the upper are partly cited from their corresponding papers.
+<b>Figure 4.</b> Comparison with prior works (in %). Note that our results are from L2R branch. The results shown in the upper are partly cited from their corresponding papers.
 </p>
 
 
 <p align="center">
 <img src="./image/ablation_study.png" height = "150" alt="" align=center />
 <br><br>
-<b>Figure 3.</b> Ablation study (in %). We evaluate AAM and BML modules on CROHME 2014 test dataset.
+<b>Figure 5.</b> Ablation study (in %). We evaluate AAM and BML modules on CROHME 2014 test dataset.
 </p>
 
 
 <p align="center">
 <img src="./image/coverage.png" height = "150" alt="" align=center />
 <br><br>
-<b>Figure 4.</b> Coverage attention visualization process of translating handwritten mathematical expressions into LaTeX sequencesin two directions (L2R and R2L). The blue box indicates the character being decoded in current time step.
+<b>Figure 6.</b> Coverage attention visualization process of translating handwritten mathematical expressions into LaTeX sequencesin two directions (L2R and R2L). The blue box indicates the character being decoded in current time step.
 </p>
 
 
 <p align="center">
 <img src="./image/feature.png" height = "150" alt="" align=center />
 <br><br>
-<b>Figure 5.</b> t-SNE Visualisation of DWAP (baseline) and ABM
+<b>Figure 7.</b> t-SNE Visualisation of DWAP (baseline) and ABM
 on CROHME 2014.
 </p>
 
