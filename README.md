@@ -45,8 +45,7 @@ We propose a novel framework with **A**ttention aggregation and **B**i-direction
 
 
 ## Data
-We use public 
-The Offline Handwritten Formula Recognition dataset CROHME 2014, 2016 and 2019 used in the paper can be download in the [TC-11 Online Resources](http://tc11.cvc.uab.es/datasets/ICDAR2019-CROHME-TDF_1) or in offical [ICDAR 2019 CROHME + TFD Competition ](https://www.cs.rit.edu/~crohme2019/dataANDtools.html).
+We use the Offline Handwritten Formula Recognition dataset CROHME 2014, 2016 and 2019 that can be download in the [TC-11 Online Resources](http://tc11.cvc.uab.es/datasets/ICDAR2019-CROHME-TDF_1) or in offical [ICDAR 2019 CROHME + TFD Competition ](https://www.cs.rit.edu/~crohme2019/dataANDtools.html).
 The required data files should be put into `data/` folder. A demo slice of the data is illustrated in the following figure. 
 
 
@@ -54,7 +53,7 @@ The required data files should be put into `data/` folder. A demo slice of the d
 ## Usage
 
 
-Note that we train our model on one train set CROHME 2014 and test the model on three test sets CROHME 2014, CROHME 2016, and CROHME2019. Commands for training and testing the model with single decoder branch or two decoder branches respectively:
+Note that we train our model on one train set CROHME 2014 and test the model on three test sets CROHME 2014, CROHME 2016, and CROHME2019. Commands for training and testing the model with single decoder branch or two decoder branches respectively are as follows:
 
 ```bash
 # for training on CROHME 2014  with one L2R branch (baseline model)
