@@ -18,7 +18,7 @@ def cmp_result(label, rec):
 
 
 
-def process(recfile, labelfile, resultfile):
+def process(recfile, labelfile, resultfile, direction):
     total_dist = 0
     total_label = 0
     total_line = 0
@@ -72,7 +72,7 @@ def process(recfile, labelfile, resultfile):
     f_result.close()
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print('compute-wer.py recfile labelfile resultfile direction')
         sys.exit(0)
     process(sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]))
