@@ -453,7 +453,7 @@ for eidx in range(max_epochs):
         # calculate wer and expRate
         if np.mod(uidx, validFreq) == 0 and valid_stop == False :
             os.system('python compute-wer.py ' + valid_output[0]+str(eidx)+'.txt' + ' ' + valid_datasets[
-                1] + ' ' + valid_result[0])
+                1] + ' ' + valid_result[0]+' 1')
 
             fpp = open(valid_result[0])
             stuff = fpp.readlines()
