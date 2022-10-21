@@ -6,6 +6,8 @@
 ![License CC BY-NC-SA](https://img.shields.io/badge/license-CC_BY--NC--SA--green.svg?style=plastic)
 
 This is the origin Pytorch implementation of ABM. 
+## News
+**upload the pre-trained model**
 
 ## Methods
 
