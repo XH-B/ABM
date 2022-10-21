@@ -7,7 +7,7 @@
 
 This is the origin Pytorch implementation of ABM. 
 ## News
-**upload the pre-trained model**
+*upload the pre-trained model*
 
 ## Methods
 
