@@ -57,6 +57,7 @@ We propose a novel framework with **A**ttention aggregation and **B**i-direction
 We use the Offline Handwritten Formula Recognition dataset CROHME 2014, 2016 and 2019 that can be download in the [TC-11 Online Resources](http://tc11.cvc.uab.es/datasets/ICDAR2019-CROHME-TDF_1) or in offical [ICDAR 2019 CROHME + TFD Competition ](https://www.cs.rit.edu/~crohme2019/dataANDtools.html).
 The required data files should be put into `data/` folder. A demo slice of the data is illustrated in the following figure. 
 
+and you can download the train data and test data from here[ICDAR2019-CROHME-TDF_1] (https://tc11.cvc.uab.es/datasets/ICDAR2019-CROHME-TDF_1)
 
 
 ## Usage
